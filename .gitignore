@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+spotify_venv/
+venv/
+.env
+**/.env
+
+# Logs
+logs/
+*.log
+
+# dbt
+target/
+dbt_packages/
+.dbt/
+
+# Airflow
+airflow.cfg
+webserver_config.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
