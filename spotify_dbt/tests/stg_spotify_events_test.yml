@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_spotify_events
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        tests:
+          - not_null
+      - name: event_ts
+        tests:
+          - not_null
