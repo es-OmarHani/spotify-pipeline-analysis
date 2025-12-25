@@ -44,6 +44,12 @@ This project demonstrates **professional data engineering practices** through a 
 
 ## 🏗️ Architecture
 
+<div align="center">
+  <img src="images/architecture_diagram.png" alt="Spotify Data Pipeline Architecture" width="900"/>
+</div>
+
+### **Data Flow Visualization**
+
 ```
 ┌─────────────┐      ┌─────────┐      ┌──────────┐      ┌─────────────┐
 │   Producer  │─────▶│  Kafka  │─────▶│ Consumer │─────▶│MinIO(Bronze)│
@@ -104,6 +110,10 @@ This project demonstrates **professional data engineering practices** through a 
 
 ```
 spotify-data-pipeline/
+│
+├── images/                        # Documentation images
+│   ├── architecture_diagram.png   # Architecture visualization
+│   └── spotify_dashboard.png      # Power BI dashboard
 │
 ├── producer/                      # Event generation
 │   └── spotify_producer.py        # Simulates Spotify user events
@@ -288,7 +298,17 @@ dbt docs serve    # View lineage graph
 
 ---
 
-## 📊 Analytics Examples
+## 📊 Analytics Dashboard
+
+### **Power BI Dashboard**
+
+<div align="center">
+  <img src="images/spotify_dashboard.png" alt="Spotify Analytics Dashboard" width="900"/>
+  
+  *Comprehensive analytics dashboard showing user engagement, song performance, and geographic insights*
+</div>
+
+### **Key Metrics & Insights**
 
 ### **User Engagement Metrics**
 - Daily active users (DAU)
@@ -357,12 +377,13 @@ LIMIT 10;
 
 ### **Short Term**
 - [ ] Implement incremental dbt models
+- [ ] Add Great Expectations for data quality
 - [ ] Create dbt snapshots for slowly changing dimensions
 
 ### **Medium Term**
 - [ ] Kafka Connect for direct Snowflake ingestion
 - [ ] CI/CD pipeline with GitHub Actions
-
+- [ ] Implement data lineage tracking
 
 ### **Long Term**
 - [ ] Machine learning models for song recommendations
@@ -392,8 +413,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Omar Elshanawany**
-
-
----
-
 
